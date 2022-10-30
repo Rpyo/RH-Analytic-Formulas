@@ -3,10 +3,10 @@ clc
 clear all
 % Conductivity gain predictions for multiscale fibrous composites
 % with interfacial thermal barrier resistance
-% Ernesto Iglesias-Rodríguez*1
-% | Julián Bravo-Castillero1
+% Ernesto Iglesias-RodrÃ­guez*1
+% | JuliÃ¡n Bravo-Castillero1
 % | Manuel E. Cruz2
-% | Raul Guinovart-Díaz
+% | Raul Guinovart-DÃ­az
 
 
 
@@ -118,7 +118,7 @@ alpha=[0:.001:.1, 0.1:.01:1];
 
  for mm=1:length(xas)
   phi=phi2;
-  K=Bi; % parámetro de imperfeccion
+  K=Bi; % parÃ¡metro de imperfeccion
   cf=xas(mm);
   for ii=1:length(alpha)
       for   jj=1:length(phi)
@@ -190,7 +190,7 @@ alpha=[0:.001:.1, 0.1:.01:1];
 phi1=[.2:.1:.6, .65,.68:.01:.74];
  for pp=1:length(Bi)
   
-  K=Bi(pp); % parámetro de imperfeccion
+  K=Bi(pp); % parÃ¡metro de imperfeccion
   cf=xas;
   for ii=1:length(alpha)
       for  jj=1:length(phi1)
@@ -296,16 +296,16 @@ xas=[2,50];
 cm=1;
 % p=[0:.001:.1, 0.1:.01:1];
 % alpha=(1-p)./(p*(.1-1)+1);
-load Sk_Tk_30_mas_5_675_hasta_90_ENoP
-No=15;
-ang=14;
-H1=(conj(delta1(ang))*conj(w2(ang))-conj(delta2(ang))*conj(w1(ang)))/(w1(ang)*conj(w2(ang))-w2(ang)*conj(w1(ang)));
-H2=((delta1(ang))*conj(w2(ang))-(delta2(ang))*conj(w1(ang)))/(w1(ang)*conj(w2(ang))-w2(ang)*conj(w1(ang)));
-S1=Sk(:,ang);
+% load Sk_Tk_30_mas_5_675_hasta_90_ENoP
+% No=15;
+% ang=14;
+% H1=(conj(delta1(ang))*conj(w2(ang))-conj(delta2(ang))*conj(w1(ang)))/(w1(ang)*conj(w2(ang))-w2(ang)*conj(w1(ang)));
+% H2=((delta1(ang))*conj(w2(ang))-(delta2(ang))*conj(w1(ang)))/(w1(ang)*conj(w2(ang))-w2(ang)*conj(w1(ang)));
+% S1=Sk(:,ang);
 
 phi=[.73:.001:0.785,.7854];
 for kk=1:length( Bi)
-   K=Bi(kk); % parámetro de imperfeccion
+   K=Bi(kk); % parÃ¡metro de imperfeccion
     for mm=1:length(xas)
        cf=xas(mm);
           for jj=1:length(phi)
@@ -477,7 +477,7 @@ ro=(cf-cm)/(cf+cm);
 xas=cf/cm;
 % ro=1/5;
 r = [0.10, .13, .16, .19]; % radio de las fibras
-R=[5:30]; % parámetro de imperfeccion
+R=[5:30]; % parÃ¡metro de imperfeccion
 Bi=[xas./R(1:end)];
 
 % Bi=[0.143, 0.133,0.125,0.118,0.111,0.105,0.1,0.095,0.091]
@@ -548,7 +548,7 @@ ro=(cf-cm)/(cf+cm);
 xas=cf/cm;
 % ro=1/5;
 r = [0.10, .13, .16, .19]; % radio de las fibras
- R=[5:30]; % parámetro de imperfeccion
+ R=[5:30]; % parÃ¡metro de imperfeccion
 % Bi=[1e12, xas./R(2:end)];
 R1=[25:-1:5];
 % Bi=[0:.1:(xas/(xas-1)-.1),xas/(xas-1),(xas/(xas-1)+.1):.1:(2*xas-1)/(xas-1)];
